@@ -16,3 +16,5 @@ Această aplicație a fost creată pentru a te ajuta să îți gestionezi bugetu
 - 🗄️ SQLite (pentru stocare locală)
 - 🎨 HTML5 & CSS3 (stil clasic, fără Bootstrap)
 - 🧠 Jinja2 (pentru template rendering)
+
+- http://127.0.0.1:5000/
