@@ -18,3 +18,8 @@ Această aplicație a fost creată pentru a te ajuta să îți gestionezi bugetu
 - 🧠 Jinja2 (pentru template rendering)
 
 - http://127.0.0.1:5000/
+
+
+🖼️ Interfață aplicație 
+![Screenshot](Buget_page.jpg) 
+![Screenshot](Home_page.jpg) 
