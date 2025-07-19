@@ -23,3 +23,4 @@ Această aplicație a fost creată pentru a te ajuta să îți gestionezi bugetu
 🖼️ Interfață aplicație 
 ![Screenshot](Buget_page.jpg) 
 ![Screenshot](Home_page.jpg) 
+![Screenshot](Server_run.jpg) 

@@ -150,3 +150,17 @@ h2 {
   border: none;
   cursor: pointer;
 }
+
+#luna {
+  border-radius: 6px;
+  font-size: 20px;
+  box-shadow: 4px 4px 12px rgba(248, 7, 248, 0.5);
+}
+
+#afisaza {
+  background-color: purple;
+  color: #dff0d8;
+  font-size: 14px;
+  height: 32px;
+  width: 80px;
+}
