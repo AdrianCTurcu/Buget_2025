@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Buget{% endblock %}
+{% block content %}
+<!-- Formularul de introducere -->
+<h2>🧾 Adauga achizitie</h2>
+<div class="form-container">
+    <!-- Stânga: Formular -->
+    <form method="POST" action="{{ url_for('adauga') }}">
+        <label for="nume">Nume produs:</label><br>
+        <input type="text" id="nume" name="nume_produs"><br><br>
+
+        <label for="pret">Preț produs:</label><br>
+        <input type="number" id="pret" name="pret_produs" step="0.01"><br><br>
+
+        <button type="submit">Adaugă</button>
+    </form>
+
+    <!-- Dreapta: Buget -->
+    <div class="buget-box">
+        💰 Buget lunar: <strong>{{ buget }} RON</strong><br>
+        💶 Cheltuieli totale: <strong>{{ "%.2f"|format(total) }}
+            RON</strong><br>
+        💼 Disponibil: <strong>{{ "%.2f"|format(disponibil) }} RON</strong><br>
+    </div>
+
+    <!-- Formular pentru setare buget -->
+    <div class="set-buget-box">
+        <form method="POST" action="{{ url_for('set_buget') }}">
+            <input type="number" name="buget_nou" placeholder="Ex: 2000">
+            <button type="submit">Salvează</button>
+        </form>
+    </div>
+
+</div>
+<br>
+<form method="get" action="{{ url_for('buget') }}">
+    <label for="luna">📅 Selectează luna:</label>
+    <select name="luna" id="luna">
+        <option value>-- Toate --</option>
+        <option value="01" {% if luna_selectata == "01" %}selected{% endif
+            %}>Ianuarie</option>
+        <option value="02" {% if luna_selectata == "02" %}selected{% endif
+            %}>Februarie</option>
+        <option value="03" {% if luna_selectata == "03" %}selected{% endif
+            %}>Martie</option>
+        <option value="04" {% if luna_selectata == "04" %}selected{% endif
+            %}>Aprilie</option>
+        <option value="05" {% if luna_selectata == "05" %}selected{% endif
+            %}>Mai</option>
+        <option value="06" {% if luna_selectata == "06" %}selected{% endif
+            %}>Iunie</option>
+        <option value="07" {% if luna_selectata == "07" %}selected{% endif
+            %}>Iulie</option>
+        <option value="08" {% if luna_selectata == "08" %}selected{% endif
+            %}>August</option>
+        <option value="09" {% if luna_selectata == "09" %}selected{% endif
+            %}>Septembrie</option>
+        <option value="10" {% if luna_selectata == "10" %}selected{% endif
+            %}>Octombrie</option>
+        <option value="11" {% if luna_selectata == "11" %}selected{% endif
+            %}>Noiembrie</option>
+        <option value="12" {% if luna_selectata == "12" %}selected{% endif
+            %}>Decembrie</option>
+    </select>
+    <button type="submit">Afișează</button>
+</form>
+<br>
+<!-- Afișare lună selectată -->
+{% if nume_luna %}
+<h3 style="margin-top: 15px;">📆 Luna selectată: {{ nume_luna }}</h3>
+{% endif %}
+
+<br>
+<h2>📋 Istoric achiziții</h2>
+
+<table class="achizitii-table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nume produs</th>
+            <th>Preț (RON)</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produs in produse %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ produs.nume }}</td>
+            <td>{{ "%.2f"|format(produs.pret) }}</td>
+            <td>{{ produs.data }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

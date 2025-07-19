@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #a5a5a5;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: purple;
+}
+
+.navbar {
+  background: linear-gradient(to right, #6a0dad, #9a3eeb);
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(241, 238, 238);
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.intro-text {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #222;
+  background-color: #f9f9f9;
+  border-left: 5px solid purple;
+  padding: 20px 25px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-family: "Segoe UI", sans-serif;
+}
+h2 {
+  font-size: 26px;
+  color: purple;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+.form-container {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.form-container form {
+  width: 60%;
+  float: left;
+}
+
+.form-container input {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 4px 4px 12px rgba(248, 7, 248, 0.5);
+}
+
+.form-container button {
+  padding: 8px 16px;
+  background-color: purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.buget-box {
+  width: 35%;
+  float: right;
+  background-color: #cce5ff; /* bleu */
+  padding: 20px;
+  text-align: left;
+  font-size: 20px;
+  border: 2px solid #99ccff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.achizitii-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.achizitii-table th,
+.achizitii-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.achizitii-table th {
+  background-color: #e6e6fa; /* mov deschis */
+  color: #333;
+}
+
+.achizitii-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.achizitii-table tr:hover {
+  background-color: #dff0d8;
+}
+
+.set-buget-box {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px dashed #cce5ff;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  width: 35%;
+  float: right;
+  box-sizing: border-box;
+}
+
+.set-buget-box input {
+  width: 80%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.set-buget-box button {
+  padding: 8px 16px;
+  background-color: purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
